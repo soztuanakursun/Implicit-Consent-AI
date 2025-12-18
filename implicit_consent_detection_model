@@ -57,11 +57,11 @@
         "    torch.backends.cudnn.benchmark = False\n",
         "\n",
         "set_seed(42)\n",
-        "print(\"✅ Random Seed (42) olarak sabitlendi. Sonuçlar artık istikrarlı.\")\n",
+        "print(\" Random Seed (42) olarak sabitlendi. Sonuçlar artık istikrarlı.\")\n",
         "\n",
         "# device setting\n",
         "device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')\n",
-        "print(f\"✅ Kullanılan Cihaz: {device}\")\n",
+        "print(f\" Kullanılan Cihaz: {device}\")\n",
         "\n",
         "# data preprocessing\n",
         "print(\"\\n--- Adım 1: Veri Seti Hazırlanıyor (Boosted Strategy) ---\")\n",
@@ -103,7 +103,7 @@
         "ambiguous_labels = [0] * (len(ambiguous_sentences) // 2) + [1] * (len(ambiguous_sentences) - (len(ambiguous_sentences) // 2))\n",
         "train_labels = [0] * len(dissent_sentences) + [1] * len(multiwoz_consent) + ambiguous_labels\n",
         "\n",
-        "print(f\"✅ Eğitim Verisi Güçlendirildi: Toplam {len(train_texts)} örnek.\")\n",
+        "print(f\" Eğitim Verisi Güçlendirildi: Toplam {len(train_texts)} örnek.\")\n",
         "\n",
         "class PrivacyDataset(Dataset):\n",
         "    def __init__(self, texts, labels, tokenizer):\n",
@@ -137,7 +137,7 @@
         "        optimizer.step()\n",
         "        total_loss += outputs.loss.item()\n",
         "    print(f\"Epoch {epoch+1}/5 - Loss: {total_loss:.4f}\")\n",
-        "print(\"✅ Model Eğitimi Tamamlandı!\")\n",
+        "print(\" Model Eğitimi Tamamlandı!\")\n",
         "\n",
         "# Rule-Based + AI + Uncertainty\n",
         "\n",
@@ -287,8 +287,8 @@
         "\n",
         "plt.savefig('grafik_final.png', dpi=300, bbox_inches='tight')\n",
         "plt.show()\n",
-        "print(f\"✅ 'grafik_final.png' oluşturuldu. (Seed=42, Sonuç Sabit).\")\n",
-        "print(f\"✅ Genel Accuracy: %{accuracy:.1f}\")"
+        "print(f\" 'grafik_final.png' oluşturuldu. (Seed=42, Sonuç Sabit).\")\n",
+        "print(f\" Genel Accuracy: %{accuracy:.1f}\")"
       ],
       "metadata": {
         "colab": {
@@ -374,11 +374,11 @@
             "Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets) (6.7.0)\n",
             "Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets) (0.4.1)\n",
             "Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2025.3.0,>=2023.1.0->datasets) (1.22.0)\n",
-            "✅ Random Seed (42) olarak sabitlendi. Sonuçlar artık istikrarlı.\n",
-            "✅ Kullanılan Cihaz: cuda\n",
+            " Random Seed (42) olarak sabitlendi. Sonuçlar artık istikrarlı.\n",
+            " Kullanılan Cihaz: cuda\n",
             "\n",
             "--- Adım 1: Veri Seti Hazırlanıyor (Boosted Strategy) ---\n",
-            "✅ Eğitim Verisi Güçlendirildi: Toplam 727 örnek.\n",
+            " Eğitim Verisi Güçlendirildi: Toplam 727 örnek.\n",
             "\n",
             "--- Adım 2: Model Eğitiliyor (DistilBERT) ---\n"
           ]
@@ -400,7 +400,7 @@
             "Epoch 3/5 - Loss: 3.2552\n",
             "Epoch 4/5 - Loss: 2.8011\n",
             "Epoch 5/5 - Loss: 2.6919\n",
-            "✅ Model Eğitimi Tamamlandı!\n",
+            " Model Eğitimi Tamamlandı!\n",
             "\n",
             "--- SENARYO TESTLERİ (Qualitative Evaluation) ---\n",
             "\n",
@@ -505,8 +505,8 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "✅ 'grafik_final.png' oluşturuldu. (Seed=42, Sonuç Sabit).\n",
-            "✅ Genel Accuracy: %85.0\n"
+            "'grafik_final.png' oluşturuldu. (Seed=42, Sonuç Sabit).\n",
+            " Genel Accuracy: %85.0\n"
           ]
         }
       ]
@@ -531,7 +531,7 @@
         "    plt.tight_layout()\n",
         "    plt.savefig('confusion_matrix.png', dpi=300)\n",
         "    plt.show()\n",
-        "    print(\"✅ 'confusion_matrix.png' oluşturuldu.\")\n",
+        "    print(\" 'confusion_matrix.png' oluşturuldu.\")\n",
         "\n",
         "\n",
         "class_names = [\"Explicit Consent\", \"Implicit Consent\", \"Ambiguous Intent\", \"No Consent\"]\n",
@@ -563,7 +563,7 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "✅ 'confusion_matrix.png' oluşturuldu.\n"
+            " 'confusion_matrix.png' oluşturuldu.\n"
           ]
         }
       ]

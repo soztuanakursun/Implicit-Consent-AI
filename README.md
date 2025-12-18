@@ -12,7 +12,7 @@ Our prototype achieved a robust overall accuracy of **85.0%**.
 * **Ambiguous Intent:** Reached an F1-score of **0.73**.
 * **Implicit Consent:** Scored **0.57**, reflecting the system's deliberate conservative calibration to prevent accidental data leakage
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Language:** Python 3.9 
 * **Model:** Fine-tuned DistilBERT (`distilbert-base-uncased`) 
 * **NLP Tools:** spaCy PhraseMatcher 

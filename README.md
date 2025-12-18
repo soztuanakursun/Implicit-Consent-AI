@@ -3,7 +3,7 @@
 This repository contains the proof-of-concept (PoC) implementation for the framework presented in the paper: **"Operationalizing Implicit Consent in Conversational AI: A Privacy-Focused Framework for Detecting Unintended User Consent"**.
 
 ## Project Overview
-[cite_start]This study addresses the challenge of identifying cases where users express implicit or unintended consent during conversations with AI systems[cite: 6]. [cite_start]The proposed framework treats implicit consent as a computational construct, combining natural language processing with a privacy-aware execution layer[cite: 8].
+This study addresses the challenge of identifying cases where users express implicit or unintended consent during conversations with AI systems. The proposed framework treats implicit consent as a computational construct, combining natural language processing with a privacy-aware execution layer.
 
 
 ## Performance Summary
